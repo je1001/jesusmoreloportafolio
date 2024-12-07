@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>Portafolio Jesús Morelo</title>
+  	<link rel="stylesheet" href="style/inicio.css">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@600&family=Inter:wght@900&display=swap">
+</head>
+<body>
+    <!-- Fondo radial -->
+    <div class="background-radial"></div>
+
+    <nav class="jdm-navegation">
+      <a href="index.html" class="jdm-yo-button" id="jdmMeButtonContainer"> Inicio </a>
+      <a href="sobremi.html" class="jdm-yo-button" id="jdmMeButtonContainer"> Sobre mí</a>
+      <a href="sobremi.html" class="jdm-yo-button" id="jdmMeButtonContainer"> Contacto</a>
+    </nav>
+
+  	<div class="jdm-title-web">
+    		<div class="jesus-david-morelo">Jesús David Morelo</div>
+  	</div>
+
+    <!-- Tarjetas descriptivas -->
+    <div class="jdm-cards-me">
+        <div class="jdm-card-description">
+              <div class="jdm-description">
+                    <div class="jdm-description-text">
+                          <p class="me-llamo-jesus">Me llamo Jesús Morelo, soy amante al diseño gráfico.</p>
+                          <p class="me-llamo-jesus">La creatividad hace parte de mi día a día, diseñar y crear es lo que amo, es lo que hacemos los diseñadores.</p>
+                    </div>
+                    <div class="jdm-me-button" id="jdmMeButtonContainerCard">
+                      <a href="sobremi.html" class="mas-sobre-mi"> SOBRE MI</a>
+
+                    </div>
+              </div>
+        </div>
+        <div class="jdm-card-image">
+              <img class="jdm-image-person-icon" alt="Imagen de Jesús Morelo" src="images/inicio/jesusmorelo.jpeg">
+        </div>
+    </div>
+
+    <!-- Carrusel -->
+    <div class="carousel-container">
+        <button class="carousel-button prev">&lt;</button>
+        <div class="card-carousel">
+            <div class="card">
+                <div class="status-label">TERMINADO</div>
+                <img src="images/inicio/carrucel-image1.png" alt="Producto" class="card-image">
+                <div class="card-footer">
+                    <div class="card-info">
+                        <div class="card-title">CLASH CARD</div>
+                        <div class="card-date">13/07/24</div>
+                    </div>
+                    <a href="clashofclan.html" class="view-more">VER MÁS</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="status-label">TERMINADO</div>
+                <img src="images/inicio/carrucel-image3.png" alt="Producto" class="card-image">
+                <div class="card-footer">
+                    <div class="card-info">
+                        <div class="card-title">X (APP) MOCKUP</div>
+                        <div class="card-date">09/08/24</div>
+                    </div>
+                    <a href="xapp.html" class="view-more">VER MÁS</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="status-label">TERMINADO</div>
+                <img src="images/inicio/carrucel-image2.png" alt="Producto" class="card-image">
+                <div class="card-footer">
+                    <div class="card-info">
+                        <div class="card-title">CLON CARD</div>
+                        <div class="card-date">05/07/24</div>
+                    </div>
+                    <a href="cloncard.html" class="view-more">VER MÁS</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-button next">&gt;</button>
+    </div>
+
+    <!-- Sección de software -->
+    <div class="jdm-card-softwaredefault">
+        <div class="jdm-container-programs">
+            <!-- Icono Photoshop -->
+            <div class="jdm-icon-container">
+                <img class="jdm-icon" alt="Photoshop icon" src="icons/photoshop.svg">
+                <div class="tooltip">Photoshop</div>
+            </div>
+            <!-- Icono Illustrator -->
+            <div class="jdm-icon-container">
+                <img class="jdm-icon" alt="Illustrator icon" src="icons/illustrador.svg">
+                <div class="tooltip">Illustrator</div>
+            </div>
+            <!-- Icono Figma -->
+            <div class="jdm-icon-container">
+                <img class="jdm-icon" alt="Figma icon" src="icons/figma.svg">
+                <div class="tooltip">Figma</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- tarjetas -->
+    <div class="advertising">
+        
+        <!-- Tarjeta 1 -->
+        <div class="advertising">
+            <div class="advertising-largue">
+              <div class="status-badge completed">TERMINADO</div>
+              <div class="advertising-image">
+                <img src="images/inicio/tarjeta1.png" alt="Imagen de PopUp" />
+              </div>
+              <div class="advertising-button">
+                <button onclick="showPopup()">PopUp</button>
+              </div>
+          
+              <!-- Popup desplegable -->
+              <div class="popup-container hidden" id="popupCard">
+                <button class="close-popup" onclick="closePopup()">X</button>
+                <div class="popup-title">PopUp</div>
+                <div class="popup-date">12/08/2024</div>
+                <div class="popup-description">
+                  Este popup es perfecto para páginas web que desean captar la atención del usuario con una promoción especial o un llamado a la acción. Su diseño llamativo lo convierte en una herramienta eficaz para aumentar la interacción del usuario y fomentar acciones específicas.
+                </div>
+                <div class="popup-action">
+                  <a href="PopUp.html" class="popup-button">VER MÁS</a>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Contenedor de las tarjetas 2 y 3 -->
+        <div class="stacked-advertising">
+          <!-- Tarjeta 2 -->
+          <div class="advertising advertising-small">
+            <div class="status-badge upcoming">PRÓXIMAMENTE</div>
+            <div class="advertising-image">
+              <img src="images/inicio/targeta2.png" alt="Imagen de Navbar" />
+            </div>
+            <div class="advertising-button">
+              <button onclick="openNavbarModal()">Navbar</button>
+            </div>
+          </div>
+          
+          <!-- Modal de Navbar -->
+          <div class="modal hidden" id="navbarModal">
+            <div class="modal-content">
+              <div class="status-badge upcoming">PRÓXIMAMENTE</div>
+              <h2>navbar</h2>
+              <div class="modal-navbar">
+                <img src="images/inicio/targeta2.png" alt="Navbar Diseño" />
+              </div>
+              <p>
+                Este diseño representa una barra de navegación (navbar) moderna y minimalista, probablemente diseñada para una página web de búsqueda o reservas (como viajes, hospedajes, etc.).
+              </p>
+              <button class="close-modal" onclick="closeNavbarModal()">CERRAR</button>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="advertising advertising-small">
+            <div class="status-badge upcoming">PRÓXIMAMENTE</div>
+            <div class="advertising-image">
+              <img src="images/inicio/targeta3.png" alt="Imagen de The Barbarian" />
+            </div>
+            <div class="advertising-button">
+              <button onclick="openModal('barbarianModal')">The Barbarian</button>
+            </div>
+          </div>
+          
+          <!-- Modal de The Barbarian -->
+          <div class="modal hidden" id="barbarianModal">
+            <div class="modal-content">
+              <div class="status-badge upcoming">PRÓXIMAMENTE</div>
+              <h2>The Barbarian</h2>
+              <div class="modal-navbar">
+                <img src="images/inicio/targeta3.png" alt="The Barbarian Diseño" />
+              </div>
+              <p>
+                Este diseño representa una experiencia visual inspirada en temáticas épicas y bárbaras, ideal para videojuegos, películas o contenido relacionado con aventuras fantásticas.
+              </p>
+              <button class="close-modal" onclick="closeModal('barbarianModal')">CERRAR</button>
+            </div>
+          </div>
+
+          <div class="popup-container hidden" id="popupCard">
+            <div class="popup-title">PopUp</div>
+            <div class="popup-date">12/08/2024</div>
+            <div class="popup-description">
+              Este popup es perfecto para páginas web que desean captar la atención del usuario con una promoción especial o un llamado a la acción. Su diseño llamativo lo convierte en una herramienta eficaz para aumentar la interacción del usuario y fomentar acciones específicas.
+            </div>
+            <div class="popup-action">
+              <button class="popup-button">VER MÁS</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- pie de pagina -->
+<div class="jdm-pag-end">
+    <div class="jdm-pag-end1">
+      <div class="frame-parent">
+        <div class="jesusdavidmorelo-wrapper">
+          <div class="jesusdavidmorelo">
+            <p class="jesusdavidmorelo1">©JesusDavidMorelo</p>
+          </div>
+        </div>
+        <div class="frame-group">
+          <div class="sobre-mi-wrapper">
+            <div class="jesusdavidmorelo">
+              <a href="sobremi.html" class="jesus-link">SOBRE MI</a>
+            </div>
+          </div>
+          <div class="sobre-mi-wrapper">
+            <div class="jesusdavidmorelo">
+              <a href="contacto.html" class="jesus-link">CONTACTO</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  	<script src="script/inicio.js"></script>
+</body>
+</html>

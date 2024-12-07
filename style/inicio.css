@@ -1,0 +1,1437 @@
+/* Fondo radial */
+.background-radial {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100vw;
+  height: 100vh;
+  background-color: #121212; /* Color base oscuro */
+  background: radial-gradient(
+      ellipse 80% 80% at 50% -20%,
+      rgba(120, 119, 198, 0.3),
+      rgba(255, 255, 255, 0)
+  );
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center; /* Centrado horizontal */
+  justify-content: flex-start; /* Ajusta el contenido hacia arriba */
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Barra de navegación */
+.jdm-navegation {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.inicio {
+  position: relative;
+  font-weight: 900;
+}
+
+/* Botones de la barra */
+.jdm-inicio-button,
+.jdm-proyect-button,
+.jdm-yo-button,
+.jdm-contac-button {
+  width: 200px;
+  border-radius: 50px;
+  background-color: rgba(217, 217, 217, 0.25);
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.jdm-inicio-button:hover,
+.jdm-proyect-button:hover,
+.jdm-yo-button:hover,
+.jdm-contac-button:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Quitar color azul y subrayado de enlaces */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* Título principal */
+.jdm-title-web {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 128px;
+  text-align: center;
+  color: #fff;
+}
+
+.jesus-david-morelo {
+  font-weight: 600;
+}
+
+/* Tarjetas descriptivas */
+.jdm-cards-me {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 20px;
+  padding: 20px;
+  color: #fff;
+}
+
+/* Tarjetas descriptivas con fondo animado */
+.jdm-card-description, .jdm-card-image {
+  width: 500px;
+  height: 503px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: hero-gradient-animation 10s linear infinite alternate;
+  background-blend-mode: overlay, overlay, overlay;
+  background-color: hsla(0, 0%, 18%, 1);
+  background-image: radial-gradient(
+      circle at var(--x-0) var(--y-0),
+      var(--c-0) var(--s-start-0),
+      transparent var(--s-end-0)
+  ),
+  radial-gradient(
+      circle at var(--x-1) var(--y-1),
+      var(--c-1) var(--s-start-1),
+      transparent var(--s-end-1)
+  ),
+  radial-gradient(
+      circle at var(--x-2) var(--y-2),
+      var(--c-2) var(--s-start-2),
+      transparent var(--s-end-2)
+  );
+}
+
+/* Animación del fondo dinámico */
+@keyframes hero-gradient-animation {
+  0% {
+      --y-0: 98%;
+      --s-start-0: 2%;
+      --s-end-0: 78.72573401919361%;
+      --x-0: 98%;
+      --c-0: hsla(55, 0%, 100%, 0.86);
+      --y-1: 98%;
+      --s-start-1: 2%;
+      --s-end-1: 78.72573401919361%;
+      --x-1: 98%;
+      --c-1: hsla(293.82352941176464, 64%, 22%, 0.86);
+      --y-2: 98%;
+      --s-start-2: 2%;
+      --s-end-2: 78.72573401919361%;
+      --x-2: 98%;
+      --c-2: hsla(0, 0%, 53%, 0.86);
+  }
+  100% {
+      --y-0: 98%;
+      --s-start-0: 2%;
+      --s-end-0: 78.72573401919361%;
+      --x-0: 2%;
+      --c-0: hsla(284, 0%, 100%, 0.86);
+      --y-1: 98%;
+      --s-start-1: 2%;
+      --s-end-1: 78.72573401919361%;
+      --x-1: 2%;
+      --c-1: hsla(0, 0%, 31%, 0.86);
+      --y-2: 98%;
+      --s-start-2: 2%;
+      --s-end-2: 78.72573401919361%;
+      --x-2: 2%;
+      --c-2: hsla(0, 0%, 21%, 0.86);
+  }
+}
+
+/* Propiedades personalizadas necesarias para la animación */
+@property --y-0 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 98%;
+}
+
+@property --s-start-0 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 2%;
+}
+
+@property --s-end-0 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 78.72573401919361%;
+}
+
+@property --x-0 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 98%;
+}
+
+@property --c-0 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsla(55, 0%, 100%, 0.86);
+}
+
+@property --y-1 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 98%;
+}
+
+@property --s-start-1 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 2%;
+}
+
+@property --s-end-1 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 78.72573401919361%;
+}
+
+@property --x-1 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 98%;
+}
+
+@property --c-1 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsla(293.82352941176464, 64%, 22%, 0.86);
+}
+
+@property --y-2 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 98%;
+}
+
+@property --s-start-2 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 2%;
+}
+
+@property --s-end-2 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 78.72573401919361%;
+}
+
+@property --x-2 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 98%;
+}
+
+@property --c-2 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsla(0, 0%, 53%, 0.86);
+}
+
+
+/* Contenido de la tarjeta descriptiva */
+.jdm-description {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/* Texto de la tarjeta descriptiva */
+.jdm-description-text {
+  line-height: 1.5;
+  font-weight: 900;
+  font-size: 30px;
+  margin: 0 10px;
+}
+
+/* Botón de la tarjeta descriptiva */
+.jdm-me-button {
+  background-color: #eaeaea;
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.jdm-me-button:hover {
+  background-color: #ffffff;
+}
+
+/* Tarjeta con imagen */
+.jdm-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* carrusel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; /* Aumenté el margen superior para separar del contenido anterior */
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.card-carousel {
+  display: flex;
+  position: relative;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  width: 300px;
+  height: 250px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: absolute;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card.active {
+  transform: translateX(0) scale(1.2); /* Tarjeta seleccionada al frente y centrada */
+  z-index: 3;
+  opacity: 1;
+}
+
+.card.left {
+  transform: translateX(-120px) scale(0.9); /* Tarjeta a la izquierda */
+  z-index: 2;
+  opacity: 0.7;
+}
+
+.card.right {
+  transform: translateX(120px) scale(0.9); /* Tarjeta a la derecha */
+  z-index: 2;
+  opacity: 0.7;
+}
+/* etiqueta terminado */
+.status-label {
+  position: absolute;
+  top: 10px; /* Posicionado desde la parte superior */
+  left: 10px; /* Posicionado desde la parte izquierda */
+  padding: 5px 10px;
+  background-color: #ce9e37; /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  font-size: 12px; /* Tamaño del texto */
+  font-weight: bold;
+  border-radius: 5px; /* Bordes redondeados */
+  z-index: 3; /* Asegura que esté encima de otros elementos */
+}
+
+/* Imagen de la tarjeta */
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Contenedor del pie de la tarjeta */
+.card-footer {
+  width: 100%;
+  height: 80px; /* Altura ajustada para el pie */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+  backdrop-filter: blur(10px); /* Efecto blur */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  z-index: 2; /* Por encima de la imagen */
+}
+
+/* Información de la tarjeta */
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 3; /* Encima del fondo */
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 900;
+  color: #000000;
+}
+
+.card-date {
+  font-size: 14px;
+  color: #000000;
+}
+
+/* Botón */
+.view-more {
+  background-color: #343434;
+  color: #fff;
+  text-decoration: none; /* Quitar subrayado */
+  display: inline-block;
+  text-align: center;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 900;
+  transition: background-color 0.3s ease;
+  z-index: 3;
+}
+
+.view-more:hover {
+  background-color: #000;
+  text-decoration: none; /* Asegurarse de que no aparezca el subrayado al pasar el ratón */
+}
+
+/* Botones */
+.carousel-button {
+  position: absolute;
+  top: 50%; /* Centrado vertical respecto al carrusel */
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.carousel-button.prev {
+  left: 260px; /* Cerca del borde izquierdo de la tarjeta */
+}
+
+.carousel-button.next {
+  right: 260px; /* Cerca del borde derecho de la tarjeta */
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+/* Barra de programas */
+.jdm-card-softwaredefault {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px); /* Efecto blur */
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 40px; /* Separación del carrusel */
+}
+
+/* Contenedor de iconos */
+.jdm-container-programs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  backdrop-filter: blur(10px); /* Efecto blur */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Iconos */
+.jdm-icon {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.jdm-icon:hover {
+  transform: translateY(-10px); /* Salto hacia arriba al pasar el mouse */
+}
+
+/* Contenedor individual de iconos */
+.jdm-icon-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tooltip */
+.jdm-icon-container .tooltip {
+  position: absolute;
+  bottom: -25px; /* Debajo del icono */
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0; /* Oculta inicialmente */
+  transform: translateY(10px); /* Posición inicial */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap; /* Evita que el texto se desborde */
+}
+
+.jdm-icon-container:hover .tooltip {
+  opacity: 1; /* Muestra el texto */
+  transform: translateY(0); /* Suaviza la entrada */
+}
+
+/* Contenedor principal de las tarjetas */
+.cards-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Reorganización en pantallas pequeñas */
+}
+
+/* Tarjeta principal (grande) */
+.large-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  width: 403px;
+  height: 796px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Tarjetas pequeñas */
+.small-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  width: 692px;
+  height: 388px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover para todas las tarjetas */
+.large-card:hover, .small-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen de las tarjetas */
+.card-image img {
+  width: 80%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* Badges (etiquetas de estado) */
+.status-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+.completed {
+  background-color: #ffd700;
+}
+
+.upcoming {
+  background-color: #ff0faf;
+}
+
+/* Botón de las tarjetas */
+.card-button button {
+  margin: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card-button button:hover {
+  background-color: #333333;
+}
+
+/* Contenedor principal */
+.jdm-card-softwaredefault {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px); /* Efecto blur */
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 40px; /* Separación del carrusel */
+}
+
+/* Contenedor de iconos */
+.jdm-container-programs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  backdrop-filter: blur(10px); /* Efecto blur */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Iconos */
+.jdm-icon {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.jdm-icon:hover {
+  transform: translateY(-10px); /* Salto hacia arriba al pasar el mouse */
+}
+
+/* Contenedor individual de iconos */
+.jdm-icon-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tooltip */
+.jdm-icon-container .tooltip {
+  position: absolute;
+  bottom: -25px; /* Debajo del icono */
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0; /* Oculta inicialmente */
+  transform: translateY(10px); /* Posición inicial */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap; /* Evita que el texto se desborde */
+}
+
+.jdm-icon-container:hover .tooltip {
+  opacity: 1; /* Muestra el texto */
+  transform: translateY(0); /* Suaviza la entrada */
+}
+/* tarjetas */
+.advertising {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 31x;
+  background-color: #121212; /* Fondo oscuro */
+  flex-wrap: wrap; /* Permite que las tarjetas se reorganicen en móviles */
+}
+
+/* Contenedor para apilar tarjetas pequeñas */
+.stacked-advertising {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Aumenta el espacio entre las tarjetas */
+  align-items: stretch; /* Asegura que las tarjetas ocupen el mismo ancho */
+}
+
+/* Tarjetas pincipales */
+.advertising-largue, .advertising-small {
+  position: relative; /* Elementos internos se posicionan sobre la tarjeta */
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Sombra inicial */
+  overflow: hidden; /* Oculta contenido que desborde */
+  width: 100%; /* Ajusta el tamaño si es necesario */
+  height: 100%; /* Ajusta el tamaño si es necesario */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición suave */
+}
+
+.advertising-largue:hover, .advertising-small:hover {
+  transform: scale(1.02); /* Escalado más sutil */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3); /* Sombra ligeramente más intensa */
+}
+
+/* Dimensiones específicas para cada tarjeta */
+.advertising-largue {
+  width: 403px;
+  height: 796px;
+}
+
+.advertising-small {
+  width: 692px;
+  height: 388px;
+  margin-top: 0; /* Elimina cualquier margen superior */
+}
+
+/* Imagen que ocupa toda la tarjeta */
+.advertising-image {
+  position: absolute; /* Coloca la imagen en el fondo de la tarjeta */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa todo el ancho de la tarjeta */
+  height: 100%; /* Ocupa toda la altura de la tarjeta */
+  z-index: 0; /* Asegura que la imagen esté detrás del contenido pero siempre visible */
+}
+
+.advertising-image img {
+  width: 100%; /* La imagen llena todo el ancho */
+  height: 100%; /* La imagen llena toda la altura */
+  object-fit: cover; /* Ajusta la imagen sin distorsionar */
+}
+
+/* Badges de estado */
+.status-badge {
+  position: absolute;
+  top: 10px; /* Espaciado desde el borde superior */
+  left: 10px; /* Espaciado desde el borde izquierdo */
+  padding: 5px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 50px;
+  z-index: 1; /* Asegura que esté sobre la imagen */
+}
+
+.completed {
+  background-color: #ffd700; /* Dorado */
+}
+
+.upcoming {
+  background-color: #ff0faf; /* Rosa vibrante */
+}
+
+/* Botón en la parte inferior con bordes redondeados */
+.advertising-button {
+  position: absolute; /* Coloca el botón sobre la imagen */
+  bottom: 20px; /* Espaciado desde el borde inferior */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Ajusta la posición para centrar */
+  z-index: 1; /* Asegura que esté sobre la imagen */
+}
+
+.advertising-button button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  border-radius: 20px; /* Bordes redondeados */
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.advertising-button button:hover {
+  background-color: #333333; /* Negro más claro al pasar el mouse */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+/* Estado activo (al hacer clic) */
+.advertising-button button:active {
+  transform: scale(0.98); /* Efecto de presión */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+}
+
+/* Contenedor del popup */
+.popup-container {
+  position: absolute;
+  bottom: 20px; /* Separación de 20px desde la parte inferior */
+  left: 50%; /* Centrado horizontalmente respecto a la tarjeta principal */
+  transform: translate(-50%, 100%); /* Animación inicial: fuera de la vista */
+  width: 345px; /* Ancho fijo */
+  height: 201px; /* Altura fija */
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye el contenido dentro del popup */
+  padding: 15px; /* Espacio interno en el popup */
+  opacity: 0; /* Oculto inicialmente */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.popup-container.show {
+  opacity: 1;
+  transform: translate(-50%, 0); /* Animación de entrada */
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555555;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-popup:hover {
+  color: #000000;
+}
+
+/* Título del popup */
+.popup-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+}
+
+/* Fecha */
+.popup-date {
+  font-size: 14px;
+  color: #343434;
+  text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+/* Descripción */
+.popup-description {
+  font-size: 12px;
+  color: #555555;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+/* Botón */
+.popup-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Separación superior del botón */
+  margin-bottom: 10px; /* Separación inferior del botón */
+}
+
+.popup-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #343434;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.popup-button:hover {
+  background-color: #555555;
+  transform: scale(1.05);
+}
+
+.popup-button:active {
+  transform: scale(0.95);
+}
+
+.hidden {
+  display: none;
+}
+
+
+.completed {
+  background-color: #ffd700; /* Dorado */
+}
+
+.upcoming {
+  background-color: #ff0faf; /* Rosa vibrante */
+}
+
+.advertising-button {
+  position: absolute; 
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 1; 
+}
+
+.advertising-button button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  border-radius: 20px; /* Bordes redondeados */
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Hover para los botones */
+.advertising-button button:hover {
+  background-color: #333333; /* Negro más claro al pasar el mouse */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+/* Estado activo (al hacer clic) */
+.advertising-button button:active {
+  transform: scale(0.98); /* Efecto de presión */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+}
+
+/* Contenedor del popup */
+.popup-container {
+  position: absolute;
+  bottom: 20px; /* Separación de 20px desde la parte inferior */
+  left: 50%; /* Centrado horizontalmente respecto a la tarjeta principal */
+  transform: translate(-50%, 100%); /* Animación inicial: fuera de la vista */
+  width: 345px; /* Ancho fijo */
+  height: 201px; /* Altura fija */
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye el contenido dentro del popup */
+  padding: 15px; /* Espacio interno en el popup */
+  opacity: 0; /* Oculto inicialmente */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Mostrar el popup */
+.popup-container.show {
+  opacity: 1;
+  transform: translate(-50%, 0); /* Animación de entrada */
+}
+
+/* Botón de cerrar (X) */
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555555;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-popup:hover {
+  color: #000000;
+}
+
+/* Título del popup */
+.popup-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+}
+
+/* Fecha */
+.popup-date {
+  font-size: 14px;
+  color: #343434;
+  text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+/* Descripción */
+.popup-description {
+  font-size: 12px;
+  color: #555555;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+/* Botón */
+.popup-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Separación superior del botón */
+  margin-bottom: 10px; /* Separación inferior del botón */
+}
+
+.popup-button {
+  padding: 10px 20px; /* Ajustamos padding para mejor integración */
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #343434;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.popup-button:hover {
+  background-color: #555555;
+  transform: scale(1.05);
+}
+
+.popup-button:active {
+  transform: scale(0.95);
+}
+
+/* Ocultar por defecto */
+.hidden {
+  display: none;
+}
+
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+  .advertising {
+    flex-direction: column; /* Las tarjetas se colocan en una columna */
+    align-items: center; /* Centra las tarjetas */
+  }
+
+  .advertising-largue, .advertising-small {
+    width: 90%; /* Ajusta el ancho para ocupar el 90% del contenedor */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .advertising-small {
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .advertising-image {
+    width: 90%; /* Reduce el tamaño de la imagen en móviles */
+    margin-top: 10px; /* Menor espacio superior */
+  }
+
+  .advertising-button button {
+    width: 85%; /* Botones más amplios para móviles */
+    font-size: 16px; /* Texto más pequeño para adaptarse al tamaño reducido */
+    padding: 12px 15px; /* Ajuste del relleno interno */
+  }
+}
+
+/* flotante */
+/* Estilos del Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+  backdrop-filter: blur(10px); /* Efecto de desenfoque en el modal */
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+  border-radius: 20px; /* Esquinas redondeadas */
+  padding: 20px;
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+/* Imágenes en el modal */
+.modal-navbar img {
+  width: 100%;
+  border-radius: 20px; /* Esquinas redondeadas en las imágenes */
+  margin: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ligera sombra */
+}
+
+/* Botón de cerrar */
+.close-modal {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 20px; /* Esquinas redondeadas */
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  background: #000;
+}
+
+/* Botones dentro del modal */
+.modal-content button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #343434;
+  border: none;
+  border-radius: 20px; /* Esquinas redondeadas */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #555;
+  transform: scale(1.05); /* Ligero aumento de tamaño */
+}
+
+.modal-content button:active {
+  transform: scale(0.95); /* Efecto de presión */
+}
+
+/* Título del modal */
+.modal h2 {
+  font-size: 24px;
+  color: #000;
+  margin-top: 10px;
+}
+
+/* Texto descriptivo */
+.modal p {
+  font-size: 16px;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* Tarjetas descriptivas */
+.jdm-cards-me {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 20px;
+  padding: 20px;
+  color: #fff; /* Texto blanco para las tarjetas */
+}
+
+/* Tarjetas descriptivas con fondo animado */
+.jdm-card-description, .jdm-card-image {
+  width: 500px;
+  height: 503px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: hero-gradient-animation 10s linear infinite alternate;
+  background-blend-mode: overlay;
+  background-color: hsla(0, 0%, 18%, 1); /* Fondo oscuro */
+  background-image: radial-gradient(
+      circle at var(--x-0) var(--y-0),
+      var(--c-0) var(--s-start-0),
+      transparent var(--s-end-0)
+  ),
+  radial-gradient(
+      circle at var(--x-1) var(--y-1),
+      var(--c-1) var(--s-start-1),
+      transparent var(--s-end-1)
+  ),
+  radial-gradient(
+      circle at var(--x-2) var(--y-2),
+      var(--c-2) var(--s-start-2),
+      transparent var(--s-end-2)
+  );
+  color: #fff; /* Texto blanco dentro de las tarjetas */
+}
+
+/* j */
+
+.jesusdavidmorelo1 {
+  margin: 0;
+  font-weight: 900;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Contenedor principal del pie de página */
+.jdm-pag-end {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  height: auto; 
+  overflow: hidden;
+  color: #fff;
+  font-family: Inter, sans-serif;
+  padding: 20px;
+  border: none;
+  text-align: center; /* Este ya no afecta la disposición final ya que el interior se gestiona con flex */
+}
+
+/* Contenedor semitransparente del fondo */
+.jdm-pag-end1 {
+  position: relative;
+  margin: 0 auto;
+  backdrop-filter: blur(50px);
+  border-radius: 50px;
+  background-color: rgba(217, 217, 217, 0.5);
+  border: none;
+  box-sizing: border-box;
+  width: auto; 
+  max-width: 1200px; 
+  height: auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  padding: 20px; 
+}
+
+/* Contenedor en línea para ©JesusDavidMorelo, SOBRE MI y CONTACTO */
+.line-content {
+  display: flex;
+  justify-content: space-between; /* © a la izquierda, enlaces a la derecha */
+  align-items: center;
+  width: 100%;
+}
+
+/* Contenedor de los enlaces de la derecha */
+.right-links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Espacio entre SOBRE MI y CONTACTO */
+}
+
+/* Estilos para los enlaces */
+.jesus-link {
+  color: #fff; 
+  text-decoration: none; 
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.jesus-link:hover {
+  /* Opcional: un ligero cambio al pasar el ratón */
+  opacity: 0.8;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .jdm-navegation {
+      flex-direction: column;
+  }
+
+  .jdm-inicio-button,
+  .jdm-proyect-button,
+  .jdm-yo-button,
+  .jdm-contac-button {
+      width: 90%;
+      font-size: 18px;
+  }
+
+  .jdm-title-web {
+      font-size: 100px;
+  }
+
+  .jdm-cards-me {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .jdm-card-description, .jdm-card-image {
+      width: 90%;
+  }
+
+  .jdm-description-text {
+      font-size: 22px;
+  }
+
+  .jdm-me-button {
+      font-size: 16px;
+      padding: 10px 20px;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-container {
+      max-width: 100%; /* Usa todo el ancho disponible */
+      padding: 10px 0; /* Padding reducido */
+  }
+}
+
+/* a */
+/* Estilos generales ya existentes */
+
+/* A partir de aquí agregamos la adaptación a móvil */
+@media (max-width: 600px) {
+  /* El contenedor principal permite apilar en una sola columna */
+  .advertising {
+    flex-direction: column;
+    align-items: center; /* Centra las tarjetas en el eje horizontal */
+    gap: 20px; /* Quizás reducir el gap en móvil */
+    padding: 20px; /* Ajusta el padding en móvil */
+  }
+
+  /* Ajustar las tarjetas grandes y pequeñas a ancho completo */
+  .advertising-largue, 
+  .advertising-small {
+    width: 310px; /* La tarjeta ocupa todo el ancho disponible */
+    height: 400px; /* La altura se adapta al contenido */
+    max-width: 620px; /* Opcional: limita el ancho máximo para no ser demasiado anchas */
+  }
+
+  /* Ajustar tipografías del popup, si se desea */
+  .popup-title {
+    font-size: 16px; /* Reducir ligeramente el tamaño */
+  }
+  
+  .popup-description {
+    font-size: 12px; /* Mantener o ajustar según preferencias */
+  }
+
+  .popup-button {
+    font-size: 14px; /* Ajustar para legibilidad en pantallas pequeñas */
+  }
+
+  /* Si hay imágenes muy grandes, ajustarlas */
+  .advertising-image img {
+    object-fit: cover;
+  }
+}
+@media (max-width: 600px) {
+  .popup-container {
+    width: 90%; /* Usa 90% del ancho de la pantalla */
+    height: auto; /* Deja que el alto se ajuste automáticamente al contenido */
+    padding: 10px; /* Reduce el padding interno para ganar espacio */
+    border-radius: 10px; /* Opcional: un radio menos pronunciado en móviles */
+  }
+
+  .popup-title {
+    font-size: 16px; /* Ajustar la tipografía un poco más pequeña */
+  }
+
+  .popup-date {
+    font-size: 12px; /* Ajustar tamaño de fuente */
+    padding: 5px; /* Podría reducir el padding si es necesario */
+  }
+
+  .popup-description {
+    font-size: 12px; /* Quizás mantener o reducir levemente para pantallas muy pequeñas */
+    padding: 0 5px; /* Reducir el padding lateral para más espacio de contenido */
+  }
+
+  .popup-button {
+    padding: 8px 15px; /* Reducir ligeramente el tamaño del botón */
+    font-size: 14px; /* Mantener o reducir según sea necesario */
+  }
+}
